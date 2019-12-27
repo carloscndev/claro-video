@@ -5,7 +5,7 @@ import React from 'react'
 
 const MovieDetail = () => (
   <div className='movie-detail'>
-    Not Fount
+    Movie Detail
   </div>
 )
 

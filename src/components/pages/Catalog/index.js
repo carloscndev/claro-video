@@ -5,7 +5,7 @@ import React from 'react'
 
 const Catalog = () => (
   <div className='main-catalog'>
-    Not Fount
+    Mian Catalog
   </div>
 )
 
