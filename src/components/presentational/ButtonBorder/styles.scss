@@ -1,0 +1,15 @@
+@import '../../../styles/variables.scss';
+
+.button-boder {
+    border: solid 1px $white;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    background-color: $black;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+.button-boder:active {
+  transform: scale(0.9);
+}
