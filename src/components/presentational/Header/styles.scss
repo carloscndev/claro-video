@@ -10,61 +10,73 @@
   max-width: 1400px;
   width: 100%;
 
-  .first-section {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-
-    .logo-wrapper {
-      width: 200px;
-      margin: 0.5rem;
-    }
-
-    .menu {
-      align-items: center;
-      display: flex;
-      justify-content: space-around;
-      margin-top: 0.8rem;
-      width: 100%;
-
-      a {
-        color: $white;
-        font-size: 1rem;
-        margin: 0rem 0.5rem;
-        text-decoration: none;
-      }
-    }
+  .header-desktop {
+    display: none;
   }
+}
 
-  .second-section {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
+@media(min-width: $medium) {
+  .container {
+    .header-desktop {
+      display: inherit;
+      margin: auto;
 
-    .input-search{
-      input {
-        color: $white;
-        border: solid 1px $gray-light;
-        border-radius: 5px;
-        height: 2em;
-        background-color: $gray;
-        padding: 0 0.3rem;
-        margin: 0 0.5rem;
+      .first-section {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        .logo-wrapper {
+          width: 200px;
+          margin: 0.5rem;
+        }
+
+        .menu {
+          align-items: center;
+          display: flex;
+          justify-content: space-around;
+          margin-top: 0.8rem;
+          width: 100%;
+
+          a {
+            color: $white;
+            font-size: 1rem;
+            margin: 0rem 0.5rem;
+            text-decoration: none;
+          }
+        }
       }
-    }
 
-    .buttons-session {
-      align-items: center;
-      box-sizing: content-box;
-      display: flex;
-      justify-content: space-around;
+      .second-section {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+
+        .input-search{
+          input {
+            color: $white;
+            border: solid 1px $gray-light;
+            border-radius: 5px;
+            height: 2em;
+            background-color: $gray;
+            padding: 0 0.3rem;
+            margin: 0 0.5rem;
+          }
+        }
+
+        .buttons-session {
+          align-items: center;
+          box-sizing: content-box;
+          display: flex;
+          justify-content: space-around;
+        }
+      }
     }
   }
 }
 
-@media(min-width: $xlarge){
-
+@media(min-width: $xlarge) {
   .container {
     .first-section {
       .logo-wrapper {

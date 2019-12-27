@@ -2,67 +2,120 @@
 
 footer {
   .container {
-    background-color: $black;
-    align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin: auto;
-    padding: 0.5rem 0;
-    max-width: 1400px;
-    width: 100%;
+    flex-direction: column;
 
     .first-section {
-      align-items: flex-start;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
       .contact {
-        display: flex;
-
-        .phone-info {
-          margin-right: 0.5rem;
-
-          strong {
-            font-weight: bold;
-          }
-        }
-        a {
-          color: $white;
-          margin-right: 0.5rem;
-          font-size: 0.9rem;
-        }
+        display: none;
       }
 
       .footer-links {
-        text-align: left;
-        margin: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         a {
           color: $white;
-          margin-right: 0.5rem;
-          font-size: 0.7rem;
+          margin: 1rem auto;
+          font-size: 1.2rem;
+          text-decoration: none;
         }
       }
     }
 
     .second-section {
-      align-items: flex-end;
-      display: flex;
-      flex-direction: column;
-
       .social {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: auto;
+
         a {
-          margin-left: 0.5rem;
-        }
+          margin: auto 1rem;        }
       }
 
       .footer-links {
-        text-align: left;
-        margin: 0.5rem 0;
-        a {
-          color: $white;
-          margin-left: 0.5rem;
-          font-size: 0.7rem;
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  footer {
+    .container {
+      background-color: $black;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: auto;
+      padding: 0.5rem 0;
+      max-width: 1400px;
+      width: 100%;
+
+      .first-section {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .contact {
+          display: flex;
+
+          .phone-info {
+            margin-right: 0.5rem;
+
+            strong {
+              font-weight: bold;
+            }
+          }
+          a {
+            color: $white;
+            margin: 0;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        .footer-links {
+          flex-direction: row;
+          text-align: left;
+          margin: 0.5rem 0;
+          a {
+            color: $white;
+            margin-right: 0.5rem;
+            font-size: 0.7rem;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .second-section {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+
+        .social {
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+
+          a {
+            margin-left: 1rem;
+          }
+        }
+
+        .footer-links {
+          display: inherit;
+          text-align: left;
+          margin: 0.5rem 0;
+          a {
+            color: $white;
+            margin-left: 0.5rem;
+            font-size: 0.7rem;
+          }
         }
       }
     }

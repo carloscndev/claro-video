@@ -19,24 +19,30 @@ export const Menu = ({ items }) => (
   </nav>
 )
 
+export const HeaderDesktop = () => (
+  <div className='header-desktop'>
+    <div className='first-section'>
+      <div className='logo-wrapper'>
+        <Logo />
+      </div>
+      <Menu items={HEADERMENU} />
+    </div>
+    <div className='second-section'>
+      <div className='input-search'>
+        <input placeholder='Buscar' />
+      </div>
+      <div className='buttons-session'>
+        <ButtonBorder>Ingresar</ButtonBorder>
+        <ButtonBorder>Regístrate</ButtonBorder>
+      </div>
+    </div>
+  </div>
+)
+
 const Header = () => (
   <header>
     <div className='container'>
-      <div className='first-section'>
-        <div className='logo-wrapper'>
-          <Logo />
-        </div>
-        <Menu items={HEADERMENU} />
-      </div>
-      <div className='second-section'>
-        <div className='input-search'>
-          <input placeholder='Buscar' />
-        </div>
-        <div className='buttons-session'>
-          <ButtonBorder>Ingresar</ButtonBorder>
-          <ButtonBorder>Regístrate</ButtonBorder>
-        </div>
-      </div>
+      <HeaderDesktop />
     </div>
   </header>
 )
