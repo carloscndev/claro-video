@@ -2,11 +2,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// Import Components
-import App from './components/presentational/App'
-
 // Import Styles
 import './styles/reset.scss'
+
+export const App = () => (
+  <div className='App'>
+    app
+  </div>
+)
 
 ReactDOM.render(
   <App />,
