@@ -1,7 +1,7 @@
-import * as ACTIONS_TYPES from '../../actions/MainLayout/actionsTypes'
+import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 
 export const initialState = {
-  isLoading: true
+  isLoading: false
 }
 
 const MainLayout = (state = initialState, action) => {

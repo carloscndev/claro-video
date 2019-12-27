@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 
-import MainLayout from './MainLayout'
+import MainLayout from './mainLayoutReducer'
+import Catalog from './catalogReducer'
 
 const rootReducer = combineReducers({
-  MainLayout
+  MainLayout,
+  Catalog
 })
 
 export default rootReducer

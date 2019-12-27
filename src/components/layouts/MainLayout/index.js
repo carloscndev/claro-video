@@ -13,7 +13,6 @@ const MainLayout = ({
   children,
   mainLayout
 }) => {
-  console.log('Holas')
   console.log(mainLayout)
   return (
     <div className={`
@@ -22,7 +21,7 @@ const MainLayout = ({
     >
       <Header />
       <main>
-        {<LoadingSpinner />}
+        {mainLayout.isLoading && <LoadingSpinner />}
         {children}
       </main>
       <Footer />

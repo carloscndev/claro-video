@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 // Import Components
-const Catalog = lazy(() => import('../components/pages/Catalog'))
+const Catalog = lazy(() => import('../components/containers/Catalog'))
 const MovieDetail = lazy(() => import('../components/pages/MovieDetail'))
 const NotFound = lazy(() => import('../components/pages/NotFound'))
 

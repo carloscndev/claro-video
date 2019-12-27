@@ -6,7 +6,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // Import Components
-import MainLayout from './components/layouts/MainLayout'
+import MainLayout from './components/containers/MainLayout'
 import Routes from './routes'
 import rootReducer from './redux/reducers/rootReducer'
 
@@ -14,7 +14,8 @@ import rootReducer from './redux/reducers/rootReducer'
 import './styles/reset.scss'
 
 export const store = createStore(
-  rootReducer
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 export const App = () => (

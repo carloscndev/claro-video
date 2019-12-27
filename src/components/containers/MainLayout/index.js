@@ -9,9 +9,8 @@ import {
 } from '../../../redux/actions/MainLayout'
 
 export const mapStateToProps = state => {
-  console.log(state)
   return {
-    MainLayout: state.mainLayout
+    mainLayout: state.MainLayout
   }
 }
 

@@ -3,10 +3,14 @@ import React from 'react'
 
 // Import Components
 
-const Catalog = () => (
-  <div className='main-catalog'>
-    Mian Catalog
-  </div>
-)
+const CatalogPage = ({
+  catalog
+}) => {
+  return (
+    <div className='main-catalog'>
+      Mian Catalog
+    </div>
+  )
+}
 
-export default Catalog
+export default CatalogPage
