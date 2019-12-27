@@ -22,9 +22,9 @@ export const Menu = ({ items }) => (
 export const HeaderDesktop = () => (
   <div className='header-desktop'>
     <div className='first-section'>
-      <div className='logo-wrapper'>
+      <a href='/' className='logo-wrapper'>
         <Logo />
-      </div>
+      </a>
       <Menu items={HEADERMENU} />
     </div>
     <div className='second-section'>
