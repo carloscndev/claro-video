@@ -9,7 +9,7 @@ header {
     margin: auto;
     padding: 0.5rem 0;
     max-width: 1400px;
-    width: 100%;
+
 
     .header-desktop {
       display: none;
@@ -22,8 +22,13 @@ header {
   header {
     .container {
       .header-desktop {
-        display: inherit;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
         margin: auto;
+        display: inherit;
+        width: 100%;
+
 
         .first-section {
           align-items: center;
