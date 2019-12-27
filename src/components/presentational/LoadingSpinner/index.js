@@ -5,19 +5,21 @@ import React from 'react'
 import './styles.scss'
 
 const LoadingSpinner = () => (
-  <div className='lds-spinner'>
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+  <div className='spinner-container'>
+    <div className='lds-spinner'>
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+    </div>
   </div>
 )
 
