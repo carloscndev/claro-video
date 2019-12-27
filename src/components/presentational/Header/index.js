@@ -30,7 +30,7 @@ const Header = () => (
       </div>
       <div className='second-section'>
         <div className='input-search'>
-          <input />
+          <input placeholder='Buscar' />
         </div>
         <div className='buttons-session'>
           <ButtonBorder>Ingresar</ButtonBorder>
