@@ -17,9 +17,10 @@ const MainLayout = ({
   return (
     <div className={`
       ${'main-layout'}
+      ${mainLayout.isMenuMobileVisible ? 'hiden' : ''}
     `}
     >
-      <Header />
+      <Header mobileVisble={mainLayout.isMenuMobileVisible} />
       <main>
         {mainLayout.isLoading && <LoadingSpinner />}
         {children}

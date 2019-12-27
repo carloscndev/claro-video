@@ -10,9 +10,73 @@ header {
     padding: 0.5rem 0;
     max-width: 1400px;
 
-
     .header-desktop {
       display: none;
+    }
+
+    .header-mobile {
+      .visible  {
+        right: 0 !important;
+      }
+
+      .menu-mobile {
+        position: absolute;
+        width: 100%;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+
+        .background {
+          background-color: $red-background;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          height: 100%;
+          width: 50%;
+        }
+        .menu-content {
+          background-color: $gray-light;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          width: 50%;
+          padding: 0.5rem;
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+
+          .first-section {
+            display: flex;
+            justify-content: space-between;
+
+            .logo-wrapper {
+              width: 150px !important;
+            }
+            .close-wrapper {
+              margin-top: 0.5rem;
+            }
+          }
+
+          .second-section {
+            .menu {
+              margin-top: 1rem;
+              a {
+                text-align: right;
+                color: $white;
+                display: block;
+                text-decoration: none;
+                margin: 2rem auto;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+
     }
   }
 }
@@ -81,6 +145,10 @@ header {
             justify-content: space-around;
           }
         }
+      }
+
+      .header-mobile {
+        display: none;
       }
     }
   }

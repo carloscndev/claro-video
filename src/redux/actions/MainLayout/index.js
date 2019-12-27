@@ -6,3 +6,10 @@ export const setLoading = isLoading => {
     isLoading
   }
 }
+
+export const setMenuMobile = isMenuMobileVisible => {
+  return {
+    type: ACTIONS_TYPES.SET_MENU_MOBILE,
+    isMenuMobileVisible
+  }
+}
