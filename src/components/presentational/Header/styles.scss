@@ -15,6 +15,26 @@ header {
     }
 
     .header-mobile {
+      width: 100%;
+
+      .header-menu-mobile {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 1rem;
+        position: relative;
+
+        .logo-wrapper {
+          width: 200px;
+        }
+
+        .hamburger-wrapper {
+          margin-top: 0.8rem;
+        }
+      }
+
       .visible  {
         right: 0 !important;
       }

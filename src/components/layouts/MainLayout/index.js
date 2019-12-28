@@ -11,7 +11,8 @@ import './styles.scss'
 
 const MainLayout = ({
   children,
-  mainLayout
+  mainLayout,
+  setMenuMobile
 }) => {
   console.log(mainLayout)
   return (
@@ -20,7 +21,10 @@ const MainLayout = ({
       ${mainLayout.isMenuMobileVisible ? 'hiden' : ''}
     `}
     >
-      <Header mobileVisble={mainLayout.isMenuMobileVisible} />
+      <Header
+        mobileVisble={mainLayout.isMenuMobileVisible}
+        setMenuMobile={setMenuMobile}
+      />
       <main>
         {mainLayout.isLoading && <LoadingSpinner />}
         {children}

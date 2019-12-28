@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import MainLayout from '../../layouts/MainLayout'
 
 import {
-  setLoading
+  setLoading,
+  setMenuMobile
 } from '../../../redux/actions/MainLayout'
 
 export const mapStateToProps = state => {
@@ -18,6 +19,9 @@ export const mapDispatchToProps = dispatch => {
   return {
     setLoading: isLoading => {
       dispatch(setLoading(isLoading))
+    },
+    setMenuMobile: isMenuMobileVisible => {
+      dispatch(setMenuMobile(isMenuMobileVisible))
     }
   }
 }

@@ -2,7 +2,7 @@ import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 
 export const initialState = {
   isLoading: false,
-  isMenuMobileVisible: true
+  isMenuMobileVisible: false
 }
 
 const MainLayout = (state = initialState, action) => {

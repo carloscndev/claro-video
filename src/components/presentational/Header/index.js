@@ -5,6 +5,7 @@ import React from 'react'
 import Logo from '../../icons/Logo'
 import ButtonBorder from '../ButtonBorder'
 import CloseIcon from '../../icons/CloseIcon'
+import HamburguerIcon from '../../icons/HamburguerICon'
 
 // Import Constants
 import { HEADERMENU } from '../../../constants/HeaderMenu'
@@ -40,19 +41,39 @@ export const HeaderDesktop = () => (
   </div>
 )
 
-export const HeaderMobile = ({ mobileVisble }) => (
+export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
   <div className='header-mobile'>
+    <div className='header-menu-mobile'>
+      <a href='/' className='logo-wrapper'>
+        <Logo />
+      </a>
+      <div
+        onClick={() => setMenuMobile(!mobileVisble)}
+        className='hamburger-wrapper'
+      >
+        <HamburguerIcon />
+      </div>
+    </div>
     <div className={`
       ${'menu-mobile'}
       ${mobileVisble ? 'visible' : ''}
-    `}>
-      <div className='background' />
+    `}
+    >
+      <div
+        className='background'
+        onClick={() => setMenuMobile(!mobileVisble)}
+      />
       <div className='menu-content'>
         <div className='first-section'>
           <a href='/' className='logo-wrapper'>
             <Logo />
           </a>
-          <div className='close-wrapper'><CloseIcon /></div>
+          <div
+            className='close-wrapper'
+            onClick={() => setMenuMobile(!mobileVisble)}
+          >
+            <CloseIcon />
+          </div>
         </div>
         <div className='second-section'>
           <Menu items={HEADERMENU} />
@@ -62,11 +83,14 @@ export const HeaderMobile = ({ mobileVisble }) => (
   </div>
 )
 
-const Header = ({ mobileVisble }) => (
+const Header = ({ mobileVisble, setMenuMobile }) => (
   <header>
     <div className='container'>
       <HeaderDesktop />
-      <HeaderMobile mobileVisble={mobileVisble} />
+      <HeaderMobile
+        mobileVisble={mobileVisble}
+        setMenuMobile={setMenuMobile}
+      />
     </div>
   </header>
 )
