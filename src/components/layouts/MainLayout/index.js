@@ -18,6 +18,7 @@ const MainLayout = ({
     <div className={`
       ${'main-layout'}
       ${mainLayout.isMenuMobileVisible ? 'hiden' : ''}
+      ${mainLayout.isLoading ? 'hiden' : ''}
     `}
     >
       <Header
