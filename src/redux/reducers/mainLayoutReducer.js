@@ -1,22 +1,19 @@
 import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 
 export const initialState = {
-  isLoading: true,
+  isLoading: false,
   isMenuMobileVisible: false
 }
 
 const MainLayout = (state = initialState, action) => {
   switch (action.type) {
     case ACTIONS_TYPES.SET_LOADING:
-      var newState = { ...state, isLoading: action.isLoading }
-      break
+      return { ...state, isLoading: action.isLoading }
     case ACTIONS_TYPES.SET_MENU_MOBILE:
-      var newState = { ...state, isMenuMobileVisible: action.isMenuMobileVisible }
-      break
+      return { ...state, isMenuMobileVisible: action.isMenuMobileVisible }
     default:
       return state
   }
-  return newState
 }
 
 export default MainLayout

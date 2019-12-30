@@ -14,7 +14,6 @@ const MainLayout = ({
   mainLayout,
   setMenuMobile
 }) => {
-  console.log(mainLayout)
   return (
     <div className={`
       ${'main-layout'}
