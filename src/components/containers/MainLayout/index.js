@@ -1,12 +1,15 @@
 // Import Modules
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 // Import Components
 import MainLayout from '../../layouts/MainLayout'
 
 import {
   setLoading,
-  setMenuMobile
+  setMenuMobile,
+  getUrlSuccess,
+  getUrl
 } from '../../../redux/actions/MainLayout'
 
 export const mapStateToProps = state => {
@@ -15,16 +18,14 @@ export const mapStateToProps = state => {
   }
 }
 
-export const mapDispatchToProps = dispatch => {
-  return {
-    setLoading: isLoading => {
-      dispatch(setLoading(isLoading))
-    },
-    setMenuMobile: isMenuMobileVisible => {
-      dispatch(setMenuMobile(isMenuMobileVisible))
-    }
-  }
-}
+export const mapDispatchToProps = dispatch => ({
+  ...bindActionCreators({
+    setLoading,
+    setMenuMobile,
+    getUrlSuccess,
+    getUrl
+  }, dispatch)
+})
 
 const MainLayoutContainer = connect(
   mapStateToProps,

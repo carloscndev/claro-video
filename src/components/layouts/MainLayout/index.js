@@ -1,5 +1,5 @@
 // Import Modules
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Import Components
 import Header from '../../presentational/Header'
@@ -12,8 +12,13 @@ import './styles.scss'
 const MainLayout = ({
   children,
   mainLayout,
-  setMenuMobile
+  setMenuMobile,
+  getUrl
 }) => {
+  useEffect(() => {
+    getUrl()
+  }, [getUrl])
+  console.log(mainLayout)
   return (
     <div className={`
       ${'main-layout'}
