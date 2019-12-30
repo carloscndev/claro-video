@@ -32,11 +32,11 @@ header {
 
         .hamburger-wrapper {
           margin-top: 0.8rem;
-        }
-      }
 
-      .visible  {
-        right: 0 !important;
+          &:active {
+            transform: scale(0.9);
+          }
+        }
       }
 
       .menu-mobile {
@@ -47,7 +47,7 @@ header {
         bottom: 0;
 
         .background {
-          background-color: $red-background;
+          background-color: $gray-background;
           position: absolute;
           top: 0;
           left: 0;
@@ -96,7 +96,10 @@ header {
         }
       }
 
-
+      .visible  {
+        animation: enter-menu 1s linear ease-in;
+        right: 0;
+      }
     }
   }
 }
@@ -191,5 +194,15 @@ header {
         }
       }
     }
+  }
+}
+
+/* Animations */
+@keyframes enter-menu {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
   }
 }

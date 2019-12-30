@@ -2,24 +2,14 @@
 import React from 'react'
 
 // Import Components
+import MenuItems from '../../presentational/MenuItems'
 import Logo from '../../icons/Logo'
 import ButtonBorder from '../ButtonBorder'
 import CloseIcon from '../../icons/CloseIcon'
 import HamburguerIcon from '../../icons/HamburguerICon'
 
-// Import Constants
-import { HEADERMENU } from '../../../constants/HeaderMenu'
-
 // Import Styles
 import './styles.scss'
-
-export const Menu = ({ items }) => (
-  <nav className='menu'>
-    {
-      items.map((item, i) => <a key={i.toString()} href={item.href}>{item.content}</a>)
-    }
-  </nav>
-)
 
 export const HeaderDesktop = () => (
   <div className='header-desktop'>
@@ -27,7 +17,7 @@ export const HeaderDesktop = () => (
       <a href='/' className='logo-wrapper'>
         <Logo />
       </a>
-      <Menu items={HEADERMENU} />
+      <MenuItems />
     </div>
     <div className='second-section'>
       <div className='input-search'>
@@ -76,7 +66,7 @@ export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
           </div>
         </div>
         <div className='second-section'>
-          <Menu items={HEADERMENU} />
+          <MenuItems />
         </div>
       </div>
     </div>
