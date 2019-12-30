@@ -1,14 +1,30 @@
 // Import Modules
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Import Components
+import MoviesLayout from '../../presentational/MoviesLayout'
+import CardMovie from '../../presentational/CardMovie'
 
 const CatalogPage = ({
-  catalog
+  catalog,
+  url,
+  getMovies
 }) => {
+  useEffect(() => {
+    if (url) {
+      getMovies(url)
+    }
+  }, [getMovies, url])
+  console.log(catalog.movies[0])
   return (
     <div className='main-catalog'>
-      Mian Catalog
+      <MoviesLayout>
+        {
+          catalog.movies && catalog.movies.map(movie =>
+            <CardMovie key={movie.id} movie={movie} />
+          )
+        }
+      </MoviesLayout>
     </div>
   )
 }

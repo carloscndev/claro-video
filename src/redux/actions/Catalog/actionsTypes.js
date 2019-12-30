@@ -1,1 +1,1 @@
-export const SET_MOVIES = 'SET_MOVIES'
+export const GET_MOVIES_SUCCESS = 'GET_MOVIES_SUCESS'

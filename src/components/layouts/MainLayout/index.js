@@ -18,7 +18,6 @@ const MainLayout = ({
   useEffect(() => {
     getUrl()
   }, [getUrl])
-  console.log(mainLayout)
   return (
     <div className={`
       ${'main-layout'}

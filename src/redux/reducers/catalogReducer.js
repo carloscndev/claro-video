@@ -7,7 +7,7 @@ export const initialState = {
 
 const Catalog = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.SET_MOVIES:
+    case ACTION_TYPES.GET_MOVIES_SUCCESS:
       return { ...state, movies: action.movies }
     default:
       return state

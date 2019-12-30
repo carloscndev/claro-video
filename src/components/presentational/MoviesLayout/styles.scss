@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+
+.movies-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 20rem;
+  grid-column-gap: 5%;
+  grid-row-gap: 1rem;
+  margin: 2rem auto;
+  margin-bottom: 4.5rem;
+  width: 90%;
+}
+
+@media(min-width: $medium){
+  .movies-layout {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
+
+}
