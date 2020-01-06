@@ -6,10 +6,12 @@ import './styles.scss'
 
 const CardMovie = ({ movie }) => (
   <div className='card-movie'>
-    <div className='title'>{movie.title_original}</div>
-    <picture className='banner'>
-      <img src={movie.image_large} alt={movie.title_original} />
-    </picture>
+    <div className='image-card-container'>
+      <picture className='banner'>
+        <source media='(max-width: 768px)' srcSet={movie.image_medium} />
+        <img src={movie.image_large} alt={movie.title_original} />
+      </picture>
+    </div>
   </div>
 
 )

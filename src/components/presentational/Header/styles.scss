@@ -45,6 +45,7 @@ header {
         right: -100%;
         top: 0;
         bottom: 0;
+        z-index: 2;
 
         .background {
           background-color: $gray-background;

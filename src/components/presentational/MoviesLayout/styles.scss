@@ -3,11 +3,9 @@
 .movies-layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 20rem;
-  grid-column-gap: 5%;
+  grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   margin: 2rem auto;
-  margin-bottom: 4.5rem;
   width: 90%;
 }
 
@@ -15,6 +13,14 @@
   .movies-layout {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1rem;
+    grid-row-gap: 4rem;
   }
-
 }
+
+@media(min-width: $xxxlarge){
+  .movies-layout {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 5rem;
+  }
+}
+
