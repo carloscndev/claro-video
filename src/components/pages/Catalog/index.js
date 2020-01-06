@@ -15,7 +15,6 @@ const CatalogPage = ({
       getMovies(url)
     }
   }, [getMovies, url])
-  console.log(catalog.movies[0])
   return (
     <div className='main-catalog'>
       <MoviesLayout>

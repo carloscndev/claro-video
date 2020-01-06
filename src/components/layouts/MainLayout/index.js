@@ -31,7 +31,7 @@ const MainLayout = ({
       />
       <main>
         {mainLayout.isLoading && <LoadingSpinner />}
-        {children}
+        {!mainLayout.isLoading && children}
       </main>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import * as ACTIONS_TYPES from '../actions/MainLayout/actionsTypes'
 
 export const initialState = {
-  isLoading: false,
+  isLoading: true,
   isMenuMobileVisible: false,
   url: ''
 }
