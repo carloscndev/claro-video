@@ -1,0 +1,50 @@
+@import '../../../styles/variables.scss';
+
+.movie-detail {
+  width: 90%;
+  margin: auto;
+
+  .image-container {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .movie-info{
+    margin: 2rem auto;
+
+    .title {
+      color: $yellow;
+      margin: 1rem auto;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+
+    .legal {
+      display: flex;
+      margin: 1rem auto;
+
+      span {
+        border: solid 1px $white;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media(min-width: $medium) {
+  .movie-detail {
+    align-items: start;
+    justify-content: center;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+  }
+}
