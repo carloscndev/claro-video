@@ -11,7 +11,7 @@ import HamburguerIcon from '../../icons/HamburguerICon'
 // Import Styles
 import './styles.scss'
 
-export const HeaderDesktop = () => (
+export const HeaderDesktop = ({ filterMovies }) => (
   <div className='header-desktop'>
     <div className='first-section'>
       <a href='/' className='logo-wrapper'>
@@ -21,7 +21,7 @@ export const HeaderDesktop = () => (
     </div>
     <div className='second-section'>
       <div className='input-search'>
-        <input placeholder='Buscar' />
+        <input placeholder='Buscar' onChange={(ev) => filterMovies(ev.target.value)} />
       </div>
       <div className='buttons-session'>
         <ButtonBorder>Ingresar</ButtonBorder>
@@ -73,10 +73,12 @@ export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
   </div>
 )
 
-const Header = ({ mobileVisble, setMenuMobile }) => (
+const Header = ({ mobileVisble, setMenuMobile, filterMovies }) => (
   <header>
     <div className='container'>
-      <HeaderDesktop />
+      <HeaderDesktop
+        filterMovies={filterMovies}
+      />
       <HeaderMobile
         mobileVisble={mobileVisble}
         setMenuMobile={setMenuMobile}

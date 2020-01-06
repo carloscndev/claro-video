@@ -19,7 +19,7 @@ const CatalogPage = ({
     <div className='main-catalog'>
       <MoviesLayout>
         {
-          catalog.movies && catalog.movies.map(movie =>
+          catalog.visibleMovies && catalog.visibleMovies.map(movie =>
             <CardMovie key={movie.id} movie={movie} />
           )
         }

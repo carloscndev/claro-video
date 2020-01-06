@@ -11,6 +11,7 @@ import {
   getUrlSuccess,
   getUrl
 } from '../../../redux/actions/MainLayout'
+import { filterMovies } from '../../../redux/actions/Catalog'
 
 export const mapStateToProps = state => {
   return {
@@ -23,7 +24,8 @@ export const mapDispatchToProps = dispatch => ({
     setLoading,
     setMenuMobile,
     getUrlSuccess,
-    getUrl
+    getUrl,
+    filterMovies
   }, dispatch)
 })
 
