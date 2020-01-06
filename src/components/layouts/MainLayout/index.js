@@ -14,7 +14,8 @@ const MainLayout = ({
   mainLayout,
   setMenuMobile,
   getUrl,
-  filterMovies
+  filterMovies,
+  setInputMovile
 }) => {
   useEffect(() => {
     getUrl()
@@ -30,6 +31,8 @@ const MainLayout = ({
         mobileVisble={mainLayout.isMenuMobileVisible}
         setMenuMobile={setMenuMobile}
         filterMovies={filterMovies}
+        setInputMovile={setInputMovile}
+        isInputMovileVisible={mainLayout.isInputMovileVisible}
       />
       <main>
         {mainLayout.isLoading && <LoadingSpinner />}

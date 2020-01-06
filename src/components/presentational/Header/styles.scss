@@ -30,12 +30,34 @@ header {
           width: 200px;
         }
 
+        .search-wrapper {
+          margin-top: 0.8rem;
+          margin-right: -2rem;
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+
         .hamburger-wrapper {
           margin-top: 0.8rem;
 
           &:active {
             transform: scale(0.9);
           }
+        }
+      }
+
+      .input-search{
+        input {
+          color: $white;
+          border: solid 1px $gray-light;
+          border-radius: 5px;
+          height: 2em;
+          background-color: $gray;
+          padding: 0 0.3rem;
+          margin: 0 0.5rem;
+          margin-left: 1rem;
         }
       }
 

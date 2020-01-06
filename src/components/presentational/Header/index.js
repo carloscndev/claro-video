@@ -7,6 +7,7 @@ import Logo from '../../icons/Logo'
 import ButtonBorder from '../ButtonBorder'
 import CloseIcon from '../../icons/CloseIcon'
 import HamburguerIcon from '../../icons/HamburguerICon'
+import SearchIcon from '../../icons/SearchIcon'
 
 // Import Styles
 import './styles.scss'
@@ -31,12 +32,24 @@ export const HeaderDesktop = ({ filterMovies }) => (
   </div>
 )
 
-export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
+export const HeaderMobile = ({
+  mobileVisble,
+  setMenuMobile,
+  filterMovies,
+  setInputMovile,
+  isInputMovileVisible
+}) => (
   <div className='header-mobile'>
     <div className='header-menu-mobile'>
       <a href='/' className='logo-wrapper'>
         <Logo />
       </a>
+      <div
+        onClick={() => setInputMovile(!isInputMovileVisible)}
+        className='search-wrapper'
+      >
+        <SearchIcon />
+      </div>
       <div
         onClick={() => setMenuMobile(!mobileVisble)}
         className='hamburger-wrapper'
@@ -44,6 +57,13 @@ export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
         <HamburguerIcon />
       </div>
     </div>
+    {
+      isInputMovileVisible && (
+        <div className='input-search'>
+          <input placeholder='Buscar' onChange={(ev) => filterMovies(ev.target.value)} />
+        </div>
+      )
+    }
     <div className={`
       ${'menu-mobile'}
       ${mobileVisble ? 'visible' : ''}
@@ -73,7 +93,13 @@ export const HeaderMobile = ({ mobileVisble, setMenuMobile }) => (
   </div>
 )
 
-const Header = ({ mobileVisble, setMenuMobile, filterMovies }) => (
+const Header = ({
+  mobileVisble,
+  setMenuMobile,
+  filterMovies,
+  setInputMovile,
+  isInputMovileVisible
+}) => (
   <header>
     <div className='container'>
       <HeaderDesktop
@@ -82,6 +108,9 @@ const Header = ({ mobileVisble, setMenuMobile, filterMovies }) => (
       <HeaderMobile
         mobileVisble={mobileVisble}
         setMenuMobile={setMenuMobile}
+        filterMovies={filterMovies}
+        setInputMovile={setInputMovile}
+        isInputMovileVisible={isInputMovileVisible}
       />
     </div>
   </header>

@@ -9,7 +9,8 @@ import {
   setLoading,
   setMenuMobile,
   getUrlSuccess,
-  getUrl
+  getUrl,
+  setInputMovile
 } from '../../../redux/actions/MainLayout'
 import { filterMovies } from '../../../redux/actions/Catalog'
 
@@ -25,7 +26,8 @@ export const mapDispatchToProps = dispatch => ({
     setMenuMobile,
     getUrlSuccess,
     getUrl,
-    filterMovies
+    filterMovies,
+    setInputMovile
   }, dispatch)
 })
 

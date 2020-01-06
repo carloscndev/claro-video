@@ -36,3 +36,10 @@ export const getUrl = () => {
       .catch(err => console.log(err))
   }
 }
+
+export const setInputMovile = isInputMovileVisible => {
+  return {
+    type: ACTIONS_TYPES.SET_INPUT_MOVILE,
+    isInputMovileVisible
+  }
+}
